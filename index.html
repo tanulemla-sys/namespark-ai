@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101322" />
+  <meta name="description" content="Create business name and slogan ideas with NameSpark." />
+  <title>NameSpark — Business Name & Slogan Generator</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0c1020;--panel:#151a2d;--panel2:#1c2340;--text:#f4f6ff;--muted:#a8b0cb;--line:#303958;--accent:#9c8cff;--accent2:#6ce5c0;--danger:#ffb5b5}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(ellipse at top,#1d2450 0%,var(--bg) 55%);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
+    .wrap{width:min(920px,100%);margin:auto;padding:28px 16px 48px}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}.logo{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#101322;font-size:22px}.hero{text-align:center;padding:35px 0 24px}.eyebrow{color:var(--accent2);font-weight:750;text-transform:uppercase;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(34px,7vw,58px);line-height:1.04;letter-spacing:-1.8px;margin:12px 0}.hero h1 span{color:var(--accent)}.hero p{max-width:580px;margin:0 auto;color:var(--muted)}
+    .panel{background:rgba(21,26,45,.94);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 20px 60px #0002}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field.full{grid-column:1/-1}label{display:block;font-size:13px;font-weight:750;margin-bottom:7px;color:#e4e8ff}input,select{width:100%;background:#0e1325;border:1px solid #394362;border-radius:12px;padding:13px 14px;color:var(--text);font:inherit;outline:none}input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #9c8cff25}.hint{font-size:12px;color:var(--muted);margin-top:6px}.btn{border:0;border-radius:12px;padding:13px 17px;font:inherit;font-weight:800;cursor:pointer;transition:transform .12s,filter .12s}.btn:active{transform:scale(.98)}.primary{width:100%;margin-top:18px;background:linear-gradient(100deg,var(--accent),#b8aaff);color:#111329}.secondary{background:#252d4c;color:var(--text);border:1px solid #3b456a;padding:8px 11px;font-size:13px}.resultshead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:26px 0 12px}.resultshead h2{font-size:21px;margin:0}.resultshead p{margin:3px 0 0;color:var(--muted);font-size:13px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}.result{position:relative;background:linear-gradient(145deg,#1b2240,#14192b);border:1px solid var(--line);border-radius:16px;padding:17px;min-width:0}.result .number{font-size:11px;color:var(--accent2);font-weight:800;letter-spacing:1px}.result h3{font-size:20px;line-height:1.2;margin:9px 0 8px;overflow-wrap:anywhere}.result .slogan{color:#c5cbe1;font-size:14px;min-height:42px}.result .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.empty{padding:28px;text-align:center;border:1px dashed #394362;border-radius:16px;color:var(--muted);grid-column:1/-1}.note{margin-top:20px;color:var(--muted);font-size:12px;text-align:center}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#e7fff7;color:#10251f;padding:10px 16px;border-radius:99px;font-size:14px;font-weight:750;box-shadow:0 8px 30px #0005;display:none;z-index:5}.toast.show{display:block}.footer{text-align:center;color:#8e98b8;font-size:12px;margin-top:28px}.footer a{color:#c1b8ff}
+    @media(max-width:620px){.wrap{padding:20px 13px 36px}.hero{padding:28px 0 20px}.panel{padding:16px}.formgrid,.cards{grid-template-columns:1fr}.field.full{grid-column:auto}.resultshead{align-items:flex-start;flex-direction:column}.result .slogan{min-height:0}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand"><div class="logo" aria-hidden="true">✦</div><span>NameSpark</span></div>
+    <section class="hero">
+      <div class="eyebrow">Your next big idea starts here</div>
+      <h1>Find a name that <span>stands out.</span></h1>
+      <p>Create business name and slogan ideas in seconds. Try different styles until one feels right.</p>
+    </section>
+    <section class="panel" aria-labelledby="form-title">
+      <h2 id="form-title" style="margin:0 0 17px;font-size:20px">Tell us about your business</h2>
+      <form id="generator-form">
+        <div class="formgrid">
+          <div class="field">
+            <label for="business">Business type *</label>
+            <input id="business" name="business" required maxlength="60" placeholder="e.g. coffee shop, clothing brand" />
+          </div>
+          <div class="field">
+            <label for="style">Naming style</label>
+            <select id="style" name="style">
+              <option value="modern">Modern & catchy</option><option value="luxury">Luxury & premium</option><option value="playful">Fun & playful</option><option value="professional">Professional & trusted</option><option value="nature">Natural & organic</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="keywords">Keywords (optional)</label>
+            <input id="keywords" name="keywords" maxlength="100" placeholder="e.g. fresh, fast, local, bright" />
+            <div class="hint">Add a few words that describe your brand, separated by commas.</div>
+          </div>
+          <div class="field full">
+            <label for="audience">Who is it for? (optional)</label>
+            <input id="audience" name="audience" maxlength="80" placeholder="e.g. students, families, small businesses" />
+          </div>
+        </div>
+        <button class="btn primary" type="submit">✦ Generate name ideas</button>
+      </form>
+    </section>
+    <section aria-live="polite" aria-labelledby="results-title">
+      <div class="resultshead"><div><h2 id="results-title">Your name ideas</h2><p id="result-subtitle">Your generated ideas will appear here.</p></div><button id="copy-all" class="btn secondary" type="button" hidden>Copy all ideas</button></div>
+      <div id="results" class="cards"><div class="empty">✨ Enter your business type above and tap “Generate name ideas”.</div></div>
+    </section>
+    <p class="note">NameSpark creates suggestions, not legal or trademark clearance. Check availability before using a name.</p>
+    <div class="footer">Made for big ideas · Free to use · No sign-up needed</div>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const clean = (s) => s.trim().replace(/\s+/g, ' ');
+  const titleCase = (s) => clean(s).split(' ').map(w => w ? w[0].toUpperCase()+w.slice(1).toLowerCase() : '').join(' ');
+  const shortWords = (s) => clean(s).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 2).slice(0,3);
+  const styleData = {
+    modern: {prefix:['Nova','Nexa','Bright','Vero','Zest','Motive','Pixel','Spark'], suffix:['ly','ora','ify','Nest','Works','Wave','Lab','Co'], slogans:['Big ideas. Bright beginnings.','Make every moment count.','A fresh take on {business}.','Built for what comes next.','Small details. Big difference.']},
+    luxury: {prefix:['Aurelia','Luxe','Velvet','Monarch','Opal','Crown','Maison','Prestige'], suffix:[' & Co.',' Atelier',' House',' Collective',' Select',' Reserve',' Studio',' Signature'], slogans:['A little extraordinary.','Made for the finer things.','Quality you can feel.','Elevate the everyday.','Distinct by design.']},
+    playful: {prefix:['Happy','Bumble','Wink','Peppy','Jolly','Doodle','Poppy','Fizz'], suffix:['Pop','Buddy','Boom','Sprout','Club','Box','Joy','Town'], slogans:['Good things, good vibes.','A little fun goes a long way.','Made to make you smile.','Bring on the happy.','More joy in every day.']},
+    professional: {prefix:['Pinnacle','Summit','TrueNorth','Core','Anchor','Evergreen','Prime','ClearPath'], suffix:[' Partners',' Solutions',' Group',' Point',' Collective',' Works',' Consulting',' Systems'], slogans:['Your goals. Our focus.','Trust built into every step.','A smarter way forward.','Dependable by design.','Helping good ideas grow.']},
+    nature: {prefix:['Cedar','River','Moss','Willow','Wildflower','Earth','Fern','Meadow'], suffix:[' & Bloom',' Grove',' Roots',' Leaf',' Field',' Valley',' Nest',' Harvest'], slogans:['A little closer to nature.','Good for you, gentle on earth.','Rooted in what matters.','Naturally made for everyday.','Grow well. Live well.']}
+  };
+  let latest = [];
+  let toastTimer;
+  function showToast(msg) { const t=$('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),1900); }
+  function hashString(s) { let h=2166136261; for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)} return h>>>0; }
+  function rng(seed) { let x=seed||123456; return () => {x=(Math.imul(1664525,x)+1013904223)>>>0;return x/4294967296}; }
+  function generateNames(business, keywords, audience, style) {
+    const data=styleData[style]||styleData.modern; const seed=hashString([business,keywords,audience,style,Date.now()].join('|')); const rand=rng(seed);
+    const base=titleCase(business.replace(/\b(shop|company|business|brand)\b/ig,'').trim()) || titleCase(business);
+    const words=shortWords(keywords); const audienceWord=shortWords(audience)[0];
+    const candidates=[]; const used=new Set();
+    const add=(name,slogan)=>{name=clean(name).replace(/\s+/g,' '); if(name.length>42) name=name.slice(0,42).trim(); const key=name.toLowerCase(); if(name && !used.has(key)){used.add(key);candidates.push({name,slogan});}};
+    for(let i=0;candidates.length<8 && i<100;i++) {
+      const p=data.prefix[Math.floor(rand()*data.prefix.length)]; const s=data.suffix[Math.floor(rand()*data.suffix.length)]; const kw=words.length?titleCase(words[Math.floor(rand()*words.length)]):'';
+      let name;
+      switch(i%6){case 0:name=p+s;break;case 1:name=p+s.replace(/^\s*&?\s*/,' ');break;case 2:name=kw?kw+' '+s.trim():p+' '+base;break;case 3:name=p+' '+base;break;case 4:name=base+' '+s.trim();break;default:name=audienceWord?p+' '+titleCase(audienceWord):p+' '+s.trim();}
+      if(style==='modern' && i%3===0) name=p+s;
+      const slogan=data.slogans[Math.floor(rand()*data.slogans.length)].replace('{business}',base.toLowerCase());
+      add(name,slogan);
+    }
+    // Ensure variety even when the business input overlaps generated terms.
+    let fallback=0; while(candidates.length<8 && fallback<20){const p=data.prefix[fallback%data.prefix.length],s=data.suffix[(fallback*3)%data.suffix.length];add(p+' '+s.trim(),data.slogans[fallback%data.slogans.length].replace('{business}',base.toLowerCase()));fallback++;}
+    return candidates.slice(0,8);
+  }
+  function render(items) {
+    const results=$('results'); results.innerHTML='';
+    items.forEach((item,i)=>{
+      const card=document.createElement('article');card.className='result';
+      const num=document.createElement('div');num.className='number';num.textContent='IDEA '+String(i+1).padStart(2,'0');
+      const title=document.createElement('h3');title.textContent=item.name;
+      const slogan=document.createElement('p');slogan.className='slogan';slogan.textContent='“'+item.slogan+'”';
+      const actions=document.createElement('div');actions.className='actions';
+      const copyName=document.createElement('button');copyName.type='button';copyName.className='btn secondary';copyName.textContent='Copy name';copyName.addEventListener('click',()=>copyText(item.name));
+      const copyPair=document.createElement('button');copyPair.type='button';copyPair.className='btn secondary';copyPair.textContent='Copy name + slogan';copyPair.addEventListener('click',()=>copyText(item.name+' — '+item.slogan));
+      actions.append(copyName,copyPair);card.append(num,title,slogan,actions);results.append(card);
+    });
+    $('copy-all').hidden=false;$('result-subtitle').textContent='Here are 8 ideas. Generate again to explore another set.';
+  }
+  async function copyText(text) {
+    try { if(navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(text); else {const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.append(ta);ta.select();const ok=document.execCommand('copy');ta.remove();if(!ok)throw new Error('copy failed');} showToast('Copied to clipboard!'); }
+    catch(e){showToast('Copy failed — please select and copy the text.');}
+  }
+  $('generator-form').addEventListener('submit',(event)=>{
+    event.preventDefault();const business=clean($('business').value);if(!business){$('business').focus();return;}
+    latest=generateNames(business,clean($('keywords').value),clean($('audience').value),$('style').value);render(latest);
+    $('results-title').textContent='Your name ideas';
+  });
+  $('copy-all').addEventListener('click',()=>copyText(latest.map((x,i)=>(i+1)+'. '+x.name+' — '+x.slogan).join('\n')));
+})();
+</script>
+</body>
+</html>
